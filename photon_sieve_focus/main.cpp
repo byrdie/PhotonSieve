@@ -69,6 +69,9 @@ int main(int argc, char *argv[]) {
         for (uint j = 0; j < numH; j++) {
 
             /* Calculate the angular position of each hole */
+            double hPhi = 2.0 * M_PI * j / numH;
+            
+            
             
             
         }

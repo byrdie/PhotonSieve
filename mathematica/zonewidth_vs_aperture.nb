@@ -1,0 +1,167 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 11.0' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       158,          7]
+NotebookDataLength[      4884,        159]
+NotebookOptionsPosition[      4241,        132]
+NotebookOutlinePosition[      4586,        147]
+CellTagsIndexPosition[      4543,        144]
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+Cell[BoxData[
+ RowBox[{"Clear", "[", "\"\<Global`*\>\"", "]"}]], "Input",
+ CellChangeTimes->{{3.6996429395045223`*^9, 3.699642948247048*^9}}],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"vals", " ", "=", 
+   RowBox[{"{", 
+    RowBox[{
+     RowBox[{"\[Lambda]", "\[Rule]", 
+      RowBox[{"300", 
+       TemplateBox[{
+        InterpretationBox["\[InvisibleSpace]", 1],"\"nm\"","nanometers",
+         "\"Nanometers\""},
+        "Quantity"]}]}], ",", " ", 
+     RowBox[{"f", "\[Rule]", 
+      RowBox[{"2", 
+       TemplateBox[{
+        InterpretationBox["\[InvisibleSpace]", 1],"\"m\"","meters",
+         "\"Meters\""},
+        "Quantity"]}]}], ",", " ", 
+     RowBox[{"r", " ", "\[Rule]", " ", 
+      RowBox[{"8.89", 
+       RowBox[{
+        TemplateBox[{
+         InterpretationBox["\[InvisibleSpace]", 1],"\"cm\"","centimeters",
+          "\"Centimeters\""},
+         "Quantity"], "/", "2"}]}]}]}], "}"}]}], ";"}]], "Input",
+ CellChangeTimes->{{3.699642992057708*^9, 3.699643052565721*^9}, {
+  3.69964311415697*^9, 3.6996431934790363`*^9}, {3.6996448376038713`*^9, 
+  3.6996448381862593`*^9}}],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[{
+ RowBox[{"fzp", "=", 
+  RowBox[{"f", " ", "\[Equal]", "  ", 
+   FractionBox[
+    RowBox[{"2", " ", "r", " ", "\[CapitalDelta]r"}], 
+    "\[Lambda]"]}]}], "\[IndentingNewLine]", 
+ RowBox[{"\[CapitalDelta]r", " ", "=", " ", 
+  RowBox[{"Part", "[", 
+   RowBox[{
+    RowBox[{"Solve", "[", 
+     RowBox[{"fzp", ",", " ", "\[CapitalDelta]r"}], "]"}], ",", "1", ",", "1",
+     ",", "2"}], "]"}]}]}], "Input",
+ CellChangeTimes->{{3.6996429108159037`*^9, 3.699642933275757*^9}, {
+  3.699642985716415*^9, 3.699643005220894*^9}, {3.6996430438579493`*^9, 
+  3.699643056627582*^9}, {3.699643205895001*^9, 3.699643242960051*^9}}],
+
+Cell[BoxData[
+ RowBox[{"f", "\[Equal]", 
+  FractionBox[
+   RowBox[{"2", " ", "r", " ", "\[CapitalDelta]r"}], "\[Lambda]"]}]], "Output",\
+
+ CellChangeTimes->{
+  3.69964293469772*^9, 3.699643006460669*^9, 3.699643057490485*^9, 
+   3.699643125434009*^9, {3.699643197164659*^9, 3.6996432463552094`*^9}, 
+   3.6996448413001947`*^9, 3.699644907418427*^9}],
+
+Cell[BoxData[
+ FractionBox[
+  RowBox[{"f", " ", "\[Lambda]"}], 
+  RowBox[{"2", " ", "r"}]]], "Output",
+ CellChangeTimes->{
+  3.69964293469772*^9, 3.699643006460669*^9, 3.699643057490485*^9, 
+   3.699643125434009*^9, {3.699643197164659*^9, 3.6996432463552094`*^9}, 
+   3.6996448413001947`*^9, 3.699644907458712*^9}]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"UnitConvert", "[", 
+  RowBox[{
+   RowBox[{"\[CapitalDelta]r", " ", "/.", " ", "vals"}], ",", 
+   "\"\<Micrometers\>\""}], "]"}]], "Input",
+ CellChangeTimes->{{3.699643252354669*^9, 3.69964327259618*^9}}],
+
+Cell[BoxData[
+ TemplateBox[{
+  "6.7491563554555665`","\"\[Micro]m\"","micrometers","\"Micrometers\""},
+  "Quantity"]], "Output",
+ CellChangeTimes->{{3.699643256739481*^9, 3.6996432728905907`*^9}, 
+   3.6996448414004593`*^9, 3.69964490752969*^9}]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"UnitConvert", "[", 
+  RowBox[{
+   RowBox[{"\[Theta]", " ", "=", " ", 
+    RowBox[{
+     RowBox[{"1.22", " ", 
+      FractionBox["\[Lambda]", 
+       RowBox[{"2", "r"}]], " ", 
+      TemplateBox[{
+       InterpretationBox["\[InvisibleSpace]", 1],"\"rad\"","radians",
+        "\"Radians\""},
+       "Quantity"]}], "/.", " ", "vals"}]}], ",", "\"\<ArcSeconds\>\""}], 
+  "]"}]], "Input",
+ CellChangeTimes->{{3.699644857508799*^9, 3.6996448978729067`*^9}}],
+
+Cell[BoxData[
+ TemplateBox[{
+  "0.8491891910735347`",RowBox[{"\[InvisibleSpace]", "\"\\\"\""}],
+   "arc seconds","\"ArcSeconds\""},
+  "QuantityPostfix"]], "Output",
+ CellChangeTimes->{{3.6996448733137207`*^9, 3.699644907610067*^9}}]
+}, Open  ]]
+},
+WindowSize->{1920, 1026},
+WindowMargins->{{1920, Automatic}, {-119, Automatic}},
+FrontEndVersion->"11.0 for Linux x86 (64-bit) (September 21, 2016)",
+StyleDefinitions->"Default.nb"
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[558, 20, 141, 2, 32, "Input"],
+Cell[702, 24, 940, 26, 34, "Input"],
+Cell[CellGroupData[{
+Cell[1667, 54, 630, 14, 77, "Input"],
+Cell[2300, 70, 349, 8, 49, "Output"],
+Cell[2652, 80, 314, 7, 50, "Output"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[3003, 92, 227, 5, 34, "Input"],
+Cell[3233, 99, 245, 5, 36, "Output"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[3515, 109, 475, 13, 52, "Input"],
+Cell[3993, 124, 232, 5, 34, "Output"]
+}, Open  ]]
+}
+]
+*)
+
